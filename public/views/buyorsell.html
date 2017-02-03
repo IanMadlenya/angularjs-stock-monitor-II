@@ -1,1 +1,43 @@
-<h3 class="container">You can buy or sell stocks from here</h3>
+<form name="orderform" class="form-horizontal" ng-submit="submitOrder(order)" >
+	<fieldset>
+		<legend>Place order::</legend>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label required" for="buyorsell">Buy/Sell</label>
+			<div class="col-md-4">
+				<select id="state" name="buyorsell" class="form-control" ng-model="order.buyOrSell" required>
+					<option value="Buy">Buy</option>
+					<option value="Sell">Sell</option>
+				</select>
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label required" for=scrip">Scrip code</label>  
+			<div class="col-md-4">
+				<select name="scripCode" class="form-control" ng-model="order.scripCode" required>
+					<option value="{{one.scripCode}}" ng-repeat="one in allScrips">{{one.scripName}}</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-4 control-label required" for=scrip">Order quantity</label>  
+			<div class="col-md-4">
+				<input  name="ordercount" type="number" placeholder="placeholder" class="form-control input-md" ng-model="order.quantity" required>
+			</div>
+		</div>
+
+		<div ng-if="order.errorFlag">
+			<div style="color:red;">{{order.errorMsg}}</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-md-offset-4 col-md-4">
+				<button id="checkout" name="checkout"  class="btn btn-primary" ng-disabled="!orderform.$valid" type="submit">Place Order</button>
+			</div>
+		</div>
+
+	</fieldset>
+</form>

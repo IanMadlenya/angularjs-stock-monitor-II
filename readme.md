@@ -4,7 +4,7 @@ This application doesn't need much of an introduction to those, who actually dab
 
 ##00. Screenshots
 ### a. Dashboard that shows your stocks/cash in account
-![monitor-your-account](https://cloud.githubusercontent.com/assets/4812767/22501312/46915fe6-e88e-11e6-9367-38a66a3f80b0.png)
+![monitor-your-account](https://cloud.githubusercontent.com/assets/4812767/22602940/4e002e5e-ea6b-11e6-8156-2442ac6a4d64.png)
 
 ### b. Simulated market price fluctuations with ten randomly chosen BSE stocks
 ![simulated-market](https://cloud.githubusercontent.com/assets/4812767/22501285/2d6f563a-e88e-11e6-939d-e0fc94098a42.png)
@@ -51,4 +51,7 @@ Change the view `./views/market.html` to list all stocks returned by `marketFeed
 Add a service `userFeedService` that will fetch the user's stock holdings/cash balance from the back-end  
 Add tables in ./views/dashboard.html to list all the stocks in users' account and also, show his cash balance  
 `git checkout 4-show-user-portfolio`  
-## 5. 
+
+## 5. Add page for the user to buy/sell stocks  
+Update the view `./views/buyorsell.html` with add/sell form controls  
+Update the controller `buyOrSellController.js` to make backend calls on every share sale or purchase  
