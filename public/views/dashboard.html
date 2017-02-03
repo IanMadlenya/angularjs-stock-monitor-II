@@ -1,1 +1,91 @@
-<h3 class="container">You can monitor the stocks you hold, cash balance in your account here</h3>
+<style>
+.dashboard-panel{
+	height: 100px;
+	width: 160px;
+	float:right;
+	border: 0 !important;
+	margin-left: 30px;
+	box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.14),
+	0px 2px 2px 0px rgba(0, 0, 0, 0.2),
+	0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-table{
+	table-layout: fixed;
+	width: 90%;
+}
+
+td, th{
+	padding: 7px;
+	text-align: center;
+	border: 1px solid black;
+}
+</style>
+<div style="display:flex;flex-direction:column;justify-content:space-around;height:100%;">
+
+		<div style="display:flex;padding:30px;justify-content: space-around;">
+		<div class="panel panel-primary dashboard-panel" >
+			<div class="panel-body" style="line-height: 30px;">
+				<span style="font-weight:bold;"> Cash Balance:</span>
+				<br/>
+				&#2352; . &nbsp; {{cash}}
+
+			</div>
+		</div>
+		<!-- <div class="panel panel-primary dashboard-panel">
+		<div class="panel-body" style="line-height: 30px;">
+		<span style="font-weight:bold;"> Profit/Loss:</span>
+		<br/>
+		&#2352; . &nbsp; {{cumulativeGain | number :2}}
+
+		</div>
+		</div> -->
+
+		<div class="panel panel-primary dashboard-panel">
+			<div class="panel-body" style="line-height: 30px;">
+				<span style="font-weight:bold;"> Share value:</span>
+				<br/>
+				&#2352; . &nbsp; {{shareValue | number :0}}
+				
+			</div>
+		</div>
+		</div>
+		
+		<div style="font-size:2em;text-align:center;color:#ea7600;">Your Stock Holdings</div>
+		<div style="display:flex;justify-content: space-around;">
+		<table class="dashboard-table">
+			<colgroup>
+				<col width="10%">
+				<col width="25%">
+				<col width="15%">
+				<col width="20%">
+				<col width="20%">
+				<col width="10%">
+			</colgroup>
+			<thead>
+				<th>Order</th>
+				<th>Scrip Code </th>
+				<th>Purchase price</th>
+				<th>Market Price</th>
+				<th>Quantity</th>
+				<th>Market Value</th>
+			</thead>
+			<tbody>
+
+				<tr ng-repeat="stock in repos track by $index">
+					<td>{{$index + 1}}</td>
+					<td>{{stock.scripCode}}</td>
+					<td>{{stock.purchasePrice}}</td>
+					<td style="background-color:{{stock.priceTrend}}">{{stock.marketPrice | number : 2}}</td>
+					<td>{{stock.quantity}}</td>
+					<td>{{stock.currentMarketVal | number : 0}}</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+</div>
+
+
+<!--  -->

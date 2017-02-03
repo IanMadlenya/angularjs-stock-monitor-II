@@ -47,7 +47,8 @@ Add a service `marketFeedSrvc` that will have endpoints, `getMarketData` to get 
 Change the view `./views/market.html` to list all stocks returned by `marketFeedSrvc.getMarketData()`  
 `git checkout 3-add-market-screen`  
 
-## 4. Add the items to show the users' dashboard  
-Add a service `userFeedService` 
-
-
+## 4. Add the items to show the users' portfolio dashboard  
+Add a service `userFeedService` that will fetch the user's stock holdings/cash balance from the back-end  
+Add tables in ./views/dashboard.html to list all the stocks in users' account and also, show his cash balance  
+`git checkout 4-show-user-portfolio`  
+## 5. 
