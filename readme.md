@@ -55,3 +55,4 @@ Add tables in ./views/dashboard.html to list all the stocks in users' account an
 ## 5. Add page for the user to buy/sell stocks  
 Update the view `./views/buyorsell.html` with add/sell form controls  
 Update the controller `buyOrSellController.js` to make backend calls on every share sale or purchase  
+`git checkout 5-buy-sell-stocks`  
