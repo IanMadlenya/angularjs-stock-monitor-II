@@ -1,5 +1,6 @@
 # What does this app do?
-It is a small stock trading application, where a user can see simulated stock price fluctuations, buy/sell stocks, and also, monitor your cash balance/stocks in portfolio. It uses angularjs for the front end and python bottle framework for the backend.
+This application doesn't need much of an introduction to those, who actually dabble in and out in the stock markets. But for those who are not into speculative trading and all those risky bets, this is a simulated stock trading application. You can see the price fluctuations as you see in a real time market such as BSE/NSE. And you can buy and sell any of the stocks from the market. You can as well, monitor your cash balance/stocks in portfolio/stock market value etc...
+  At the end, all these data are stored into MongoDB as well which we are accessing using python pymongo driver. The frontend uses angular 1.4.
 
 #1. Screenshots
 ## a. Dashboard that shows your stocks/cash in account
