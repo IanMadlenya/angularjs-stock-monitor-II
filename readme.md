@@ -34,10 +34,10 @@ For this, we need the following endpoints.
 * /api/sell    -- sell 'n' shares of a stock at the market price  
 * /api/buy     -- buy 'n' shares of a stock at the market price  
 Open the python file, ./myrestapi.py and add four different route handlers
-`git checkout 1-backend-in-place`
+`git checkout 1-backend-in-place`  
 ## 2.  Setup navigation links and three different views for each one of the screens..
 * Configure your router
-* Add view files and controller files
+* Add view files and controller files  
 `git checkout 2-add-routes-and-views`
 ## 3. Add services
 
