@@ -43,8 +43,8 @@ Add view files and controller files
 
 ## 3. Add the market screen
 Add a service `marketFeedSrvc` that will have endpoints, `getMarketData` to get the market price of all stocks, and `makeOneTickChange` that causes the stock price to go up/down after a unit of time  
-Change the view `./views/market.html` to list all stocks returned by `marketFeedSrvc.getMarketData()`
-git tag `3-add-market-screen`
+Change the view `./views/market.html` to list all stocks returned by `marketFeedSrvc.getMarketData()`  
+`git tag 3-add-market-screen`  
 
 ## 4. Add the items to show the users' dashboard  
 Add display boxes in ./views/dashboard.html  
