@@ -12,24 +12,27 @@ It is a small stock trading application, where a user can see simulated stock pr
 ![buy-sell-stock](https://cloud.githubusercontent.com/assets/4812767/22501317/4ebb6432-e88e-11e6-84bb-884f740e4d90.png)
 
 #2. Run it locally
-## 1. Clone the code
-`git clone https://github.com/madhavan020985/stock-monitor`
-
-`cd stock-monitor`
-
-## 2. Setup Mongo database
----- Install Mongodb on your machine
-
----- Load the data into database
-
+## 0. Install/Load the database, Install python libraries, Clone the code  
+Step-0 does the code scaffolding work for you...  
+#After installing mongodb on your machine using the command, `sudo apt-get -y install mongodb`, open mongo shell and load the database,
 `mongo < ./initdb.js`
+#Verify the collections statsInfo (that contains the users' cash balance)and stocksColln (that contains the stocks in user's account) contain documents using the command,  
+`db.statsInfo.find({}, {'_id': 0})`
+`db.stocksColln.find({}, {'_id': 0})`  
+#Install python libraries for bottle server and mongo driver
+`sudo pip install pymongo`  
+`sudo pip install bottle`  
+`git clone https://github.com/madhavan020985/angularjs-stock-monitor`  
+`cd angularjs-stock-monitor`  
+`git checkout 0-from-the-scratch`  
+open `http://localhost:3300/index.html`
+A simple app must be up and running  
+## 1. Setup the backend for stock trading app using bottle endpoints
+There are three screens featured in the application. One screen will show all stocks traded actively in the market with their fluctuating market prices. Second screen will contain a form that allows the user to buy/sell any of the traded stocks. Third screen will contain the user's cash balance, total asset value, stocks lying in his DEMAT account
+For this, we need the following endpoints.
+* /api/stocks  -- to get all the stock information
+* /api/cash    -- to get the user's cash balance
+* /api/sell    -- sell 'n' shares of a stock at the market price
+* /api/buy     -- buy 'n' shares of a stock at the market price
 
-## 3. Setup the python server backend
-`sudo pip install pymongo` # python driver for mongodb
 
-`sudo pip install bottle`  # http server framework
-
-`python restapi.py`        # run the server at port 3300
-
-## 4. Launch app
-Open the url, `http://localhost:3300/index.html#/` and now play with it.
