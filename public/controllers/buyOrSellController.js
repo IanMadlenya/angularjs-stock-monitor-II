@@ -1,2 +1,2 @@
-skApp.controller('buyOrSellCtrl',   function($scope){
+stockTradingApp.controller('buyOrSellCtrl',   function($scope){
 });

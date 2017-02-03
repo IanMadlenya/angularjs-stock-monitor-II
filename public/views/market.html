@@ -1,1 +1,24 @@
-<h3 class="container">This is a live market</h3>
+<table style="table-layout:fixed; width:90%;">
+	<colgroup>
+		<col width="20%">
+		<col width="25%">
+		<col width="25%">
+		<col width="30%">
+	</colgroup>
+	<thead>
+		<th>Order</th>
+		<th>Scrip Code </th>
+		<th>Scrip Name</th>
+		<th>Market Price</th>
+	</thead>
+	<tbody>
+
+		<tr ng-repeat="stock in marketData track by $index">
+			<td>{{$index + 1}}</td>
+			<td>{{stock.scripCode}}</td>
+			<td>{{stock.scripName}}</td>
+			<td style="background-color:{{stock.priceTrend}}">{{stock.marketPrice | number : 2}}</td>
+		</tr>
+
+	</tbody>
+</table>

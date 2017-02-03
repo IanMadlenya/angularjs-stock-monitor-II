@@ -1,3 +1,3 @@
-skApp.controller('dashboardCtrl', function($scope){
+stockTradingApp.controller('dashboardCtrl', function($scope){
 
 });

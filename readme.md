@@ -36,11 +36,17 @@ For this, we need the following endpoints.
 Open the python file, ./myrestapi.py and add four different route handlers
 `git checkout 1-backend-in-place`
 
-## 2.  Setup navigation links and three different views for each one of the screens..
-* Configure your router
-* Add view files and controller files  
+## 2.  Setup navigation links and three different views for each one of the screens..  
+Configure your router  
+Add view files and controller files  
 `git checkout 2-add-routes-and-views`
 
-## 3. Add services
+## 3. Add the market screen
+Add a service `marketFeedSrvc` that will have endpoints, `getMarketData` to get the market price of all stocks, and `makeOneTickChange` that causes the stock price to go up/down after a unit of time
+Change the view `./views/market.html` to list all stocks returned by `marketFeedSrvc.getMarketData()`
+
+## 4. Add the items to show the users' dashboard  
+Add display boxes in ./views/dashboard.html  
+
 
 
