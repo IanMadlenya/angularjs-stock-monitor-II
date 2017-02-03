@@ -1,0 +1,14 @@
+&&&&&&&&&&&&&&&&&&&&&&&& To get all stocks &&&&&&&&&&&&&&&&&&&&&&&&&&&
+curl http://localhost:3300/api/stocks
+
+&&&&&&&&&&&&&&&&&&&&&&&& To get cash balance &&&&&&&&&&&&&&&&&&&&&&&&&&&
+curl http://localhost:3300/api/cash
+
+&&&&&&&&&&&&&&&&&&&&&&&& To sell 2 shares of State bank &&&&&&&&&&&&&&&&&&&&&
+curl -H "Content-type:application/json" -X POST http://localhost:3300/api/sell --data '{"quantity" : 2, "scripCode" : "SBIN", "marketPrice" : 300}'
+
+&&&&&&&&&&&&&&&&&&&&&&&& To buy 2 shares of State bank &&&&&&&&&&&&&&&&&&&&&
+curl -H "Content-type:application/json" -X POST http://localhost:3300/api/buy --data '{"quantity" : 2, "scripCode" : "SBIN", "marketPrice" : 300, "scripName" : "State Bank Of India"}'
+
+
+curl -H "Content-type:application/json" -X POST http://localhost:3300/api/sell --data '{"quantity" : 3, "scripCode" : "SBIN", "marketPrice" : 206.1}'
