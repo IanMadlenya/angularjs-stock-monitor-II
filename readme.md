@@ -12,19 +12,18 @@ It is a small stock trading application, where a user can see simulated stock pr
 ![buy-sell-stock](https://cloud.githubusercontent.com/assets/4812767/22501317/4ebb6432-e88e-11e6-84bb-884f740e4d90.png)
 
 # 0. Install/Load the database, Install python libraries, Clone the code  
-Step-0 does the code scaffolding work for you...  
---After installing mongodb on your machine using the command, `sudo apt-get -y install mongodb`, open mongo shell and load the database,
-`mongo < ./initdb.js`
+--After installing mongodb on your machine using the command, `sudo apt-get -y install mongodb`, open mongo shell and load the database,  
+`mongo < ./initdb.js`  
 --Verify the collections statsInfo (that contains the users' cash balance)and stocksColln (that contains the stocks in user's account) contain documents using the command,  
-`db.statsInfo.find({}, {'_id': 0})`
+`db.statsInfo.find({}, {'_id': 0})`  
 `db.stocksColln.find({}, {'_id': 0})`  
---Install python libraries for bottle server and mongo driver
+--Install python libraries for bottle server and mongo driver  
 `sudo pip install pymongo`  
 `sudo pip install bottle`  
 `git clone https://github.com/madhavan020985/angularjs-stock-monitor`  
 `cd angularjs-stock-monitor`  
 `git checkout 0-from-the-scratch`  
-open `http://localhost:3300/index.html`
+open `http://localhost:3300/index.html`  
 A simple app must be up and running  
 # 1. Setup the backend for stock trading app using bottle endpoints
 There are three screens featured in the application. One screen will show all stocks traded actively in the market with their fluctuating market prices. Second screen will contain a form that allows the user to buy/sell any of the traded stocks. Third screen will contain the user's cash balance, total asset value, stocks lying in his DEMAT account
