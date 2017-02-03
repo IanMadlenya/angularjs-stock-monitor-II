@@ -42,7 +42,7 @@ Add view files and controller files
 `git checkout 2-add-routes-and-views`
 
 ## 3. Add the market screen
-Add a service `marketFeedSrvc` that will have endpoints, `getMarketData` to get the market price of all stocks, and `makeOneTickChange` that causes the stock price to go up/down after a unit of time
+Add a service `marketFeedSrvc` that will have endpoints, `getMarketData` to get the market price of all stocks, and `makeOneTickChange` that causes the stock price to go up/down after a unit of time  
 Change the view `./views/market.html` to list all stocks returned by `marketFeedSrvc.getMarketData()`
 
 ## 4. Add the items to show the users' dashboard  
