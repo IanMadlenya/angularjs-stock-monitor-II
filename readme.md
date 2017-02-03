@@ -1,7 +1,7 @@
 # What does this app do?
 It is a small stock trading application, where a user can see simulated stock price fluctuations, buy/sell stocks, and also, monitor your cash balance/stocks in portfolio. It uses angularjs for the front end and python bottle framework for the backend.
 
-#1. Screenshots
+#00. Screenshots
 ## a. Dashboard that shows your stocks/cash in account
 ![monitor-your-account](https://cloud.githubusercontent.com/assets/4812767/22501312/46915fe6-e88e-11e6-9367-38a66a3f80b0.png)
 
@@ -11,15 +11,14 @@ It is a small stock trading application, where a user can see simulated stock pr
 ## c. Form to buy and sell stocks
 ![buy-sell-stock](https://cloud.githubusercontent.com/assets/4812767/22501317/4ebb6432-e88e-11e6-84bb-884f740e4d90.png)
 
-#2. Run it locally
-## 0. Install/Load the database, Install python libraries, Clone the code  
+# 0. Install/Load the database, Install python libraries, Clone the code  
 Step-0 does the code scaffolding work for you...  
-#After installing mongodb on your machine using the command, `sudo apt-get -y install mongodb`, open mongo shell and load the database,
+--After installing mongodb on your machine using the command, `sudo apt-get -y install mongodb`, open mongo shell and load the database,
 `mongo < ./initdb.js`
-#Verify the collections statsInfo (that contains the users' cash balance)and stocksColln (that contains the stocks in user's account) contain documents using the command,  
+--Verify the collections statsInfo (that contains the users' cash balance)and stocksColln (that contains the stocks in user's account) contain documents using the command,  
 `db.statsInfo.find({}, {'_id': 0})`
 `db.stocksColln.find({}, {'_id': 0})`  
-#Install python libraries for bottle server and mongo driver
+--Install python libraries for bottle server and mongo driver
 `sudo pip install pymongo`  
 `sudo pip install bottle`  
 `git clone https://github.com/madhavan020985/angularjs-stock-monitor`  
@@ -27,7 +26,7 @@ Step-0 does the code scaffolding work for you...
 `git checkout 0-from-the-scratch`  
 open `http://localhost:3300/index.html`
 A simple app must be up and running  
-## 1. Setup the backend for stock trading app using bottle endpoints
+# 1. Setup the backend for stock trading app using bottle endpoints
 There are three screens featured in the application. One screen will show all stocks traded actively in the market with their fluctuating market prices. Second screen will contain a form that allows the user to buy/sell any of the traded stocks. Third screen will contain the user's cash balance, total asset value, stocks lying in his DEMAT account
 For this, we need the following endpoints.
 * /api/stocks  -- to get all the stock information
