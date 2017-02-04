@@ -4,7 +4,7 @@ This application doesn't need much of an introduction to those, who actually dab
 
 ##00. Screenshots
 ### a. Dashboard that shows your stocks/cash in account
-![monitor-your-account](https://cloud.githubusercontent.com/assets/4812767/22602940/4e002e5e-ea6b-11e6-8156-2442ac6a4d64.png)
+![monitor-your-account](https://cloud.githubusercontent.com/assets/4812767/22614448/1e9efb80-eaa8-11e6-9622-711277910adb.png)
 
 ### b. Simulated market price fluctuations with ten randomly chosen BSE stocks
 ![simulated-market](https://cloud.githubusercontent.com/assets/4812767/22501285/2d6f563a-e88e-11e6-939d-e0fc94098a42.png)

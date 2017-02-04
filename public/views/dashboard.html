@@ -23,7 +23,7 @@ td, th{
 </style>
 <div style="display:flex;flex-direction:column;justify-content:space-around;height:100%;">
 
-		<div style="display:flex;padding:30px;justify-content: space-around;">
+	<div style="display:flex;padding:30px;justify-content: space-around;">
 		<div class="panel panel-primary dashboard-panel" >
 			<div class="panel-body" style="line-height: 30px;">
 				<span style="font-weight:bold;"> Cash Balance:</span>
@@ -49,10 +49,11 @@ td, th{
 				
 			</div>
 		</div>
-		</div>
-		
+	</div>
+	
+	<div>
 		<div style="font-size:2em;text-align:center;color:#ea7600;">Your Stock Holdings</div>
-		<div style="display:flex;justify-content: space-around;">
+		<br/>
 		<table class="dashboard-table">
 			<colgroup>
 				<col width="10%">
@@ -71,7 +72,7 @@ td, th{
 				<th>Market Value</th>
 			</thead>
 			<tbody>
-
+				
 				<tr ng-repeat="stock in repos track by $index">
 					<td>{{$index + 1}}</td>
 					<td>{{stock.scripCode}}</td>
@@ -80,7 +81,7 @@ td, th{
 					<td>{{stock.quantity}}</td>
 					<td>{{stock.currentMarketVal | number : 0}}</td>
 				</tr>
-
+				
 			</tbody>
 		</table>
 	</div>
